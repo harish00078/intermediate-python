@@ -1,10 +1,17 @@
-# points related to thread.
-# 1 when we perform a big program in that program we had a small programs or function that is know as thread
-# 2 small , small processes is know as thraed
-# 3 basically in under processes we had a small processes that is call thread
+# points related to thread.(main point:-Thread is the segment of a process means a process can have multiple threads )
+# thread is also known as leight weight process.
+# thread = if we scheduled a process or function or we want a process and function exectue faster or also want that process or  fucntion took a short storage of our system that why we use thread.
+# 1 when we perform a big program in that program we had a small programs or function that we want to execute in short period of time or we want to scheduled there execution that's why we use thread
+# 2 small , small processes we create according to my configration  is know as thread
+# 3 what is thread (Threads in python are an entity within a process that can be scheduled for execution. In simpler words, a thread is a computation process that is to be performed by a computer. It is a sequence of such instructions within a program that can be executed independently of other codes).
 # 4 thread is very usefull in big programs executions we can execute big programs very fast using threads
 # 5 creating  thread we can use full power of our system cores or cpu
 # 6 main point is that in thread use target method that will basically target a particular fucntion or value in program that we want to execute as a thread 
+
+
+#defination of thread:-Thread is the segment of a process means a process can have multiple threads and these multiple threads are contained within a process. A thread has three states: Running, Ready, and Blocked. The thread takes less time to terminate as compared to the process but unlike the process, threads do not isolate. 
+
+
 
 
 

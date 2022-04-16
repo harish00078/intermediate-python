@@ -82,28 +82,68 @@
 # Rear: Get the last item from queue – Time Complexity : O(1)
 
 # example of queue:- how queue work
-from threading import Thread
+# from threading import Thread
+# from queue import Queue
+# import time
+
+# if __name__ == "__main__":
+#     q = Queue()
+    
+    
+#     q.put(1)
+#     q.put(2)
+#     q.put(3)
+    
+#     # 3 2 1 -->
+#     first = q.get()
+#     print(first)
+    
+    
+#     # q.task_done()
+#     # q.join()
+     
+#     print('end main')
+    
+# example of queue how to use queue in thread:-
+from threading import Thread, Lock, current_thread
 from queue import Queue
 import time
 
-if __name__ == "__main__":
+
+def worker(q,lock):
+    while True:
+        value = q.get()
+        
+        
+        
+        #processing:
+        with lock:
+            print(f'in {current_thread().name} got {value}')
+        q.task_done()
+        
+    
+
+
+
+
+if __name__ =="__main__":
+    
     q = Queue()
+    lock = Lock()
     
+    num_threads = 10
     
-    q.put(1)
-    q.put(2)
-    q.put(3)
+    for i in range(num_threads):
+        thread = Thread(target=worker, args=(q,lock))
+        thread.daemon=True  # daemon = The threads which are always going to run in the background that provides supports to main or non-daemon threads, those background executing threads are considered as Daemon Threads. The Daemon Thread does not block the main thread from exiting and continues to run in the background.
+        thread.start()
+        
+        
+        
+    for i in range(1,21):
+        q.put(i)
+        
+    q.join()
     
-    # 3 2 1 -->
-    first = q.get()
-    print(first)
-    
-    
-    # q.task_done()
-    # q.join()
-     
-    print('end main')
-    
-
-
+    print('end  main')
     
