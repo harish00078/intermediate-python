@@ -57,13 +57,11 @@
 #     p2.join()
     
     
-# <<<<<<< HEAD
+
 #     print('number at end is',shared_number.value)
-# =======
+
 # #     print('number at end is',shared_number.value)
     
-# >>>>>>> c9bbc271a4d940835f967c9d6667637ec8a6c24f
-
     
 
 # from multiprocessing import Process, Value, Array, Lock
@@ -79,9 +77,7 @@
 #                 numbers[i] += 1
         
         
-# <<<<<<< HEAD
-    
-# =======
+
         
 # if __name__ == "__main__":
     
