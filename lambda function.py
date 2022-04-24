@@ -1,5 +1,5 @@
 # lambda arguments:expression
-# this is basically used for giving a function to variable 
+# this is basically used for giving a function to variable or create a function in one line
 
 
 
